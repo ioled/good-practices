@@ -10,6 +10,7 @@ Los mensajes de los commit están basados en [Conventional Commits](https://www.
 siguiente forma:
 
 - Siempre en inglés
+- Normalmente tienen una sola línea
 - Parten con la forma de: **tipo**, un **contexto** y una **descripción**
 
 ```
@@ -20,10 +21,11 @@ tipo(contexto): descripción
 
 Los tipos nos ayudan a clasificar los commits y a hacer más fácil la búsqueda en caso de que algo salga mal. Los tipos más usados en iOLED son:
 
-- **feat**: Nueva feture
+- **feature**: Nueva feature
 - **fix**: La correción de un bug
-- **docs**: Cambios en la documentación
+- **doc**: Cambios en la documentación
 - **style**: Cambios en el estilo
+- **refactor**: Cambios en el código que no agrega una funcionalidad ni corrige un bug
 
 ### **Contexto**
 
@@ -36,14 +38,14 @@ El contexto hace referencia al lugar del código o funcionalidad que afecta el c
 
 ### Ejemplo
 
-Como ejemplo de estas recomendaciones el siguiente commit soluciona un bug en el método *applyLedConfig* en el firmware de la aplicación, en el cual no se estaba apagando el LED al aplicar porcentaje 0.
+Como ejemplo de estas recomendaciones el siguiente commit soluciona un bug en el método *applyLedConfig* en el firmware del LED, en el cual no se estaba apagando el LED al aplicar porcentaje 0.
 
 ```
 fix(applyLedConfig): fix problem when set percent in 0
 
 The 'applyLedConfig' method don't turn off the LED when set percent in 0.
 
-This commits add validation when set percen in 0.
+This commits add validation when set percent in 0.
 ```
 
 --- 
